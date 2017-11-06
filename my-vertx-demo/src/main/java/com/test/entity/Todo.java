@@ -1,6 +1,7 @@
 package com.test.entity;
 
 import io.vertx.codegen.annotations.DataObject;
+import io.vertx.core.json.JsonObject;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -24,6 +25,12 @@ public class Todo {
         this.completed = other.completed;
         this.order = other.order;
         this.url = other.url;
+    }
+
+    public Todo(String todo) {
+    }
+
+    public Todo(JsonObject jsonObject) {
     }
 
     public Todo(int id, String title, Boolean completed, Integer order, String url) {
