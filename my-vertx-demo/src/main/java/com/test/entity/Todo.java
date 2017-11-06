@@ -18,20 +18,20 @@ public class Todo {
     public Todo() {
     }
 
+    public Todo(Todo other) {
+        this.id = other.id;
+        this.title = other.title;
+        this.completed = other.completed;
+        this.order = other.order;
+        this.url = other.url;
+    }
+
     public Todo(int id, String title, Boolean completed, Integer order, String url) {
         this.id = id;
         this.title = title;
         this.completed = completed;
         this.order = order;
         this.url = url;
-    }
-
-    public Todo(Todo other) {
-        this.id = other.id;
-    }
-
-    public static AtomicInteger getAcc() {
-        return acc;
     }
 
     public int getId() {
